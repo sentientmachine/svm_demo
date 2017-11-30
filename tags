@@ -4,7 +4,67 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	//
-X	/home/el/code/python/50_computer_vision_python_kickstart/svm_demo/svm.py	/^X = [[0, 0], [1, 1]]$/;"	v	access:public
-clf	/home/el/code/python/50_computer_vision_python_kickstart/svm_demo/svm.py	/^clf = svm.SVC()$/;"	v	access:public
-plt	/home/el/code/python/50_computer_vision_python_kickstart/svm_demo/svm.py	/^import matplotlib.pyplot as plt$/;"	I	access:public
-y	/home/el/code/python/50_computer_vision_python_kickstart/svm_demo/svm.py	/^y = [0, 1]$/;"	v	access:public
+I	/home/el/bin/svm_demo/svm_segregate_two.py	/^I = clf.intercept_$/;"	v	access:public
+W	/home/el/bin/svm_demo/svm_segregate_two.py	/^W = clf._get_coef()[0]$/;"	v	access:public
+X	/home/el/bin/svm_demo/svm.py	/^X = [[0, 0], [1, 1]]$/;"	v	access:public
+X	/home/el/bin/svm_demo/svm2.py	/^X = np.concatenate((x1, x2), axis=0) # concatenate the 1 and -1 samples$/;"	v	access:public
+X	/home/el/bin/svm_demo/svm_hello_world.py	/^X = [[0, 0], [1, 1]]$/;"	v	access:public
+X	/home/el/bin/svm_demo/svm_segregate_two.py	/^X = np.concatenate((x1, x2), axis=0) # concatenate the 1 and -1 samples$/;"	v	access:public
+XX	/home/el/bin/svm_demo/svm_segregate_two.py	/^YY, XX = np.meshgrid(yy, xx)$/;"	v	access:public
+YY	/home/el/bin/svm_demo/svm_segregate_two.py	/^YY, XX = np.meshgrid(yy, xx)$/;"	v	access:public
+Z	/home/el/bin/svm_demo/svm_segregate_two.py	/^Z = clf.decision_function(xy).reshape(XX.shape)$/;"	v	access:public
+a	/home/el/bin/svm_demo/svm_segregate_two.py	/^a = float(-W[0]) \/ float(W[1])$/;"	v	access:public
+answer	/home/el/bin/svm_demo/svm2.py	/^answer = clf.predict([production_point])$/;"	v	access:public
+answer	/home/el/bin/svm_demo/svm_segregate_two.py	/^answer = clf.predict([production_point])$/;"	v	access:public
+ax	/home/el/bin/svm_demo/svm_segregate_two.py	/^ax = plt.gca()$/;"	v	access:public
+b	/home/el/bin/svm_demo/svm_segregate_two.py	/^b =  float(I[0]) \/ float(W[1])$/;"	v	access:public
+clf	/home/el/bin/svm_demo/svm.py	/^clf = svm.SVC()$/;"	v	access:public
+clf	/home/el/bin/svm_demo/svm2.py	/^clf = svm.SVC()$/;"	v	access:public
+clf	/home/el/bin/svm_demo/svm_hello_world.py	/^clf = svm.SVC()$/;"	v	access:public
+clf	/home/el/bin/svm_demo/svm_segregate_two.py	/^clf = svm.SVC()$/;"	v	access:public
+color	/home/el/bin/svm_demo/svm2.py	/^color = colormap[answer[0]]$/;"	v	access:public
+color	/home/el/bin/svm_demo/svm_segregate_two.py	/^color = colormap[answer[0]]$/;"	v	access:public
+colormap	/home/el/bin/svm_demo/svm2.py	/^colormap = ['r', 'b']$/;"	v	access:public
+colormap	/home/el/bin/svm_demo/svm_segregate_two.py	/^colormap = ['r', 'b']$/;"	v	access:public
+cov1	/home/el/bin/svm_demo/svm2.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+cov1	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+cov2	/home/el/bin/svm_demo/svm2.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+cov2	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+max_x	/home/el/bin/svm_demo/svm_segregate_two.py	/^max_x = np.max(X[:,0])$/;"	v	access:public
+mean1	/home/el/bin/svm_demo/svm2.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+mean1	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+mean2	/home/el/bin/svm_demo/svm2.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+mean2	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+min_x	/home/el/bin/svm_demo/svm_segregate_two.py	/^min_x = np.min(X[:,0])$/;"	v	access:public
+n1	/home/el/bin/svm_demo/svm2.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+n1	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1$/;"	v	access:public
+n2	/home/el/bin/svm_demo/svm2.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+n2	/home/el/bin/svm_demo/svm_segregate_two.py	/^mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1$/;"	v	access:public
+np	/home/el/bin/svm_demo/svm2.py	/^import numpy as np$/;"	I	access:public
+np	/home/el/bin/svm_demo/svm_segregate_two.py	/^import numpy as np$/;"	I	access:public
+plot2	/home/el/bin/svm_demo/svm_segregate_two.py	/^plot2 = plt.plot(yy, xx, 'og')$/;"	v	access:public
+plt	/home/el/bin/svm_demo/svm.py	/^import matplotlib.pyplot as plt$/;"	I	access:public
+plt	/home/el/bin/svm_demo/svm2.py	/^import matplotlib.pyplot as plt$/;"	I	access:public
+plt	/home/el/bin/svm_demo/svm_hello_world.py	/^import matplotlib.pyplot as plt$/;"	I	access:public
+plt	/home/el/bin/svm_demo/svm_segregate_two.py	/^import matplotlib.pyplot as plt$/;"	I	access:public
+production_point	/home/el/bin/svm_demo/svm2.py	/^production_point = [1., 2.5]$/;"	v	access:public
+production_point	/home/el/bin/svm_demo/svm_segregate_two.py	/^production_point = [1., 2.5]$/;"	v	access:public
+x1	/home/el/bin/svm_demo/svm2.py	/^x1 = np.random.multivariate_normal(mean1, cov1, n1)$/;"	v	access:public
+x1	/home/el/bin/svm_demo/svm_segregate_two.py	/^x1 = np.random.multivariate_normal(mean1, cov1, n1)$/;"	v	access:public
+x2	/home/el/bin/svm_demo/svm2.py	/^x2 = np.random.multivariate_normal(mean2, cov2, n2)$/;"	v	access:public
+x2	/home/el/bin/svm_demo/svm_segregate_two.py	/^x2 = np.random.multivariate_normal(mean2, cov2, n2)$/;"	v	access:public
+xlim	/home/el/bin/svm_demo/svm_segregate_two.py	/^xlim = ax.get_xlim()$/;"	v	access:public
+xx	/home/el/bin/svm_demo/svm_segregate_two.py	/^xx = np.arange(min_x, max_x, 1.0)$/;"	v	access:public
+xx	/home/el/bin/svm_demo/svm_segregate_two.py	/^xx = np.linspace(xlim[0], xlim[1], 30)$/;"	v	access:public
+xy	/home/el/bin/svm_demo/svm_segregate_two.py	/^xy = np.vstack([XX.ravel(), YY.ravel()]).T$/;"	v	access:public
+y	/home/el/bin/svm_demo/svm.py	/^y = [0, 1]$/;"	v	access:public
+y	/home/el/bin/svm_demo/svm2.py	/^y = np.concatenate((y1, y2))$/;"	v	access:public
+y	/home/el/bin/svm_demo/svm_hello_world.py	/^y = [0, 1]$/;"	v	access:public
+y	/home/el/bin/svm_demo/svm_segregate_two.py	/^y = np.concatenate((y1, y2))$/;"	v	access:public
+y1	/home/el/bin/svm_demo/svm2.py	/^y1 = np.ones(n1, dtype=np.int)$/;"	v	access:public
+y1	/home/el/bin/svm_demo/svm_segregate_two.py	/^y1 = np.ones(n1, dtype=np.int)$/;"	v	access:public
+y2	/home/el/bin/svm_demo/svm2.py	/^y2 = 0 * np.ones(n2, dtype=np.int)$/;"	v	access:public
+y2	/home/el/bin/svm_demo/svm_segregate_two.py	/^y2 = 0 * np.ones(n2, dtype=np.int)$/;"	v	access:public
+ylim	/home/el/bin/svm_demo/svm_segregate_two.py	/^ylim = ax.get_ylim()$/;"	v	access:public
+yy	/home/el/bin/svm_demo/svm_segregate_two.py	/^yy =  a * xx - b$/;"	v	access:public
+yy	/home/el/bin/svm_demo/svm_segregate_two.py	/^yy = np.linspace(ylim[0], ylim[1], 30)$/;"	v	access:public

@@ -18,7 +18,7 @@ y = [0, 1]
 #reveal the training data input
 plt.plot(X, y, 'ro')
 plt.margins(1, 1)
-plt.show()
+#plt.show()
 
 
 #Instantiate a new Support Vector Machine Classifier
@@ -48,16 +48,16 @@ print("Answer: " + str(clf.predict([[2., 2.]])))
 #in 2 dimensions, it's just a line, y=mx + b
 
 # get support vectors
-print(clf.support_vectors_)
+#print(clf.support_vectors_)
 #array([[ 0.,  0.],
 #       [ 1.,  1.]])
 
 
 # get indices of support vectors
-print(clf.support_)
+#print(clf.support_)
 #array([0, 1]...)
 
 # get number of support vectors for each class
-print(clf.n_support_)
+#print(clf.n_support_)
 #array([1, 1]...)
 
