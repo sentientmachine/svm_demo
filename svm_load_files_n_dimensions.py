@@ -22,6 +22,9 @@ import matplotlib.pyplot as plt
 #X are the training rows 2 dimensions, a list of lists containing x and y
 #X = [[0, 0], [1, 1]]
 
+#Load files
+
+
 
 np.random.seed(0)
 mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1
