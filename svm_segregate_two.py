@@ -2,6 +2,7 @@
 import numpy as np
 
 #mlpy requires emerge -avNu mlpy
+#mlpy requires apt-get install python-mlpy
 import mlpy
 import sys
 #Import Support Vector Machine code from sklearn
