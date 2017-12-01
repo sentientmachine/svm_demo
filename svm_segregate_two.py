@@ -3,9 +3,7 @@ import numpy as np
 
 #mlpy requires emerge -avNu mlpy
 import mlpy
-
-from dtype import dtype
-
+import sys
 #Import Support Vector Machine code from sklearn
 from sklearn import svm
 
@@ -54,16 +52,13 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 
 #If we pass in unseen row x=2 and y=2 then the answer should be classification 1
 
-
-#production_point = [4., 1]
-#production_point = [-1., 5]
-
 production_point = [1., 2.5]
 
-answer = clf.predict([production_point])
-print("Answer: " + str(answer))
+answer1 = clf.predict([production_point])
 
-#array([1])  #yeah!
+production_point = [-1., 5]
+
+answer2 = clf.predict([production_point])
 
 #reveal the training data input for reds and blues
 #ob is "point blue"
@@ -73,7 +68,7 @@ print("Answer: " + str(answer))
 plt.plot(x1[:,0], x1[:,1], 'ob', x2[:,0], x2[:,1], 'or', markersize = 5)
 
 colormap = ['r', 'b']
-color = colormap[answer[0]]
+color = colormap[answer1[0]]
 
 plt.plot(production_point[0], production_point[1], 'o' + str(color), markersize=20)
 
@@ -92,19 +87,14 @@ xy = np.vstack([XX.ravel(), YY.ravel()]).T
 Z = clf.decision_function(xy).reshape(XX.shape)
 
 # plot decision boundary and margins
+import warnings
+warnings.simplefilter("ignore", FutureWarning)
+#The following method is buggy down to the core becuase it hurls warnings all over the place
+#because it's contracts will change on every new version
 ax.contour(XX, YY, Z, colors='k', levels=[-1, 0, 1], alpha=0.5,
            linestyles=['--', '-', '--'])
-
-plt.show()
-
-
-
-
-
-
-
-
-
+plt.savefig("svm_segregate_two.py.png")
+#plt.show()
 
 
 
@@ -115,9 +105,9 @@ plt.show()
 #y = a*x - b
 
 
-
-
-
+sys.stdout.write("Answer1: " + str(answer1))
+sys.stdout.write("Answer2: " + str(answer2))
+sys.stdout.write("done")
 
 
 exit()
@@ -132,8 +122,8 @@ b =  float(I[0]) / float(W[1])
 print("a is: " + str(a))
 print("b is: " + str(b))
 
-min_x = np.min(X[:,0])
-max_x = np.max(X[:,0])
+min_x = np.min(X[:,0], axis=0)
+max_x = np.max(X[:,0], axis=0)
 print(min_x)
 print(max_x)
 
