@@ -3,7 +3,7 @@ import numpy as np
 
 #mlpy requires emerge -avNu mlpy
 #mlpy requires apt-get install python-mlpy
-import mlpy
+#import mlpy
 import sys
 #Import Support Vector Machine code from sklearn
 from sklearn import svm
@@ -13,7 +13,7 @@ from sklearn.svm import SVC
 
 #matplot lib plots help us visualize what is going on
 import matplotlib.pyplot as plt
-
+plt.switch_backend('agg')
 
 
 #X are the training rows 2 dimensions, a list of lists containing x and y
@@ -45,7 +45,9 @@ clf.fit(X, y)
 
 #specify config options, read the docs
 SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, 
-    decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
+    decision_function_shape='ovr', degree=3, 
+    gamma='auto',  #gamma set to 100 guarentees overfitted support vector lines
+    kernel='rbf',
     max_iter=-1, probability=False, random_state=None, shrinking=True,
     tol=0.001, verbose=False)
 

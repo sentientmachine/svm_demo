@@ -60,6 +60,7 @@ WHITE	/home/el/.pythonrc.py	/^                WHITE = ''$/;"	v	class:secretclass
 WHITE	/home/el/.pythonrc.py	/^                WHITE = '\\033[0;37m'$/;"	v	class:secretclass.dtype.bcolors	access:public
 WHITEBOLD	/home/el/.pythonrc.py	/^                WHITEBOLD = ''$/;"	v	class:secretclass.dtype.bcolors	access:public
 WHITEBOLD	/home/el/.pythonrc.py	/^                WHITEBOLD = WHITE + BOLD$/;"	v	class:secretclass.dtype.bcolors	access:public
+X	/home/el/bin/svm_demo/svm_hello_world.py	/^X = [[0, 0], [1, 1]]$/;"	v	access:public
 X	/home/el/bin/svm_demo/svm_segregate_two.py	/^X = np.concatenate((x1, x2), axis=0) # concatenate the 1 and -1 samples$/;"	v	access:public
 XX	/home/el/bin/svm_demo/svm_segregate_two.py	/^YY, XX = np.meshgrid(yy, xx)$/;"	v	access:public
 YY	/home/el/bin/svm_demo/svm_segregate_two.py	/^YY, XX = np.meshgrid(yy, xx)$/;"	v	access:public
@@ -70,6 +71,7 @@ answer2	/home/el/bin/svm_demo/svm_segregate_two.py	/^answer2 = clf.predict([prod
 ax	/home/el/bin/svm_demo/svm_segregate_two.py	/^ax = plt.gca()$/;"	v	access:public
 b	/home/el/bin/svm_demo/svm_segregate_two.py	/^b =  float(I[0]) \/ float(W[1])$/;"	v	access:public
 bcolors	/home/el/.pythonrc.py	/^            class bcolors(object):$/;"	c	member:secretclass.dtype	file:	inherits:object	access:private
+clf	/home/el/bin/svm_demo/svm_hello_world.py	/^clf = svm.SVC()$/;"	v	access:public
 clf	/home/el/bin/svm_demo/svm_segregate_two.py	/^clf = svm.SVC()$/;"	v	access:public
 color	/home/el/bin/svm_demo/svm_segregate_two.py	/^color = colormap[answer1[0]]$/;"	v	access:public
 colormap	/home/el/bin/svm_demo/svm_segregate_two.py	/^colormap = ['r', 'b']$/;"	v	access:public
@@ -171,6 +173,7 @@ xlim	/home/el/bin/svm_demo/svm_segregate_two.py	/^xlim = ax.get_xlim()$/;"	v	acc
 xx	/home/el/bin/svm_demo/svm_segregate_two.py	/^xx = np.arange(min_x, max_x, 1.0)$/;"	v	access:public
 xx	/home/el/bin/svm_demo/svm_segregate_two.py	/^xx = np.linspace(xlim[0], xlim[1], 30)$/;"	v	access:public
 xy	/home/el/bin/svm_demo/svm_segregate_two.py	/^xy = np.vstack([XX.ravel(), YY.ravel()]).T$/;"	v	access:public
+y	/home/el/bin/svm_demo/svm_hello_world.py	/^y = [0, 1]$/;"	v	access:public
 y	/home/el/bin/svm_demo/svm_segregate_two.py	/^y = np.concatenate((y1, y2))$/;"	v	access:public
 y1	/home/el/bin/svm_demo/svm_segregate_two.py	/^y1 = np.ones(n1, dtype=np.int)$/;"	v	access:public
 y2	/home/el/bin/svm_demo/svm_segregate_two.py	/^y2 = 0 * np.ones(n2, dtype=np.int)$/;"	v	access:public

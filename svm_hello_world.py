@@ -5,10 +5,10 @@ from sklearn import svm
 #The SVC module under SVC does classifications
 from sklearn.svm import SVC
 
-import matplotlib
-matplotlib.use('Agg')
+#import matplotlib
+#matplotlib.use('Agg')
 #matplot lib plots help us visualize what is going on
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 #X are the training rows 2 dimensions, x and y
@@ -19,8 +19,8 @@ y = [0, 1]
 
 
 #reveal the training data input
-plt.plot(X, y, 'ro')
-plt.margins(1, 1)
+#plt.plot(X, y, 'ro')
+#plt.margins(1, 1)
 #plt.show()
 
 
