@@ -3,7 +3,7 @@ import numpy as np
 
 #mlpy requires emerge -avNu mlpy
 #mlpy requires apt-get install python-mlpy
-#import mlpy
+import mlpy
 import sys
 #Import Support Vector Machine code from sklearn
 from sklearn import svm
@@ -16,28 +16,52 @@ matplotlib.use('Agg')
 
 #matplot lib plots help us visualize what is going on
 import matplotlib.pyplot as plt
-plt.switch_backend('agg')
 
+#import csv
+#import os
+#import cProfile
+#import time
+#import numpy
+import pandas
+#import warnings
+
+csv_delimiter = ','
+def open_with_pandas_read_csv(filename):
+    df = pandas.read_csv(filename, sep=csv_delimiter)
+    data = df.values
+    return data
+
+AllData = open_with_pandas_read_csv("./alldata.csv")
+print(AllData)
+x1 = AllData[AllData[:,0] == 1, 1:]
+x2 = AllData[AllData[:,0] == 2, 1:]
+
+X = AllData[:,1:]
+y = AllData[:,0]
 
 #X are the training rows 2 dimensions, a list of lists containing x and y
 #X = [[0, 0], [1, 1]]
 
+#Load files
 
-np.random.seed(0)
-mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1
-x1 = np.random.multivariate_normal(mean1, cov1, n1)
-y1 = np.ones(n1, dtype=np.int)
 
-mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1
-x2 = np.random.multivariate_normal(mean2, cov2, n2)
-y2 = 0 * np.ones(n2, dtype=np.int)
 
-X = np.concatenate((x1, x2), axis=0) # concatenate the 1 and -1 samples
+#np.random.seed(0)
+#mean1, cov1, n1 = [1, 5], [[1,1],[1,2]], 200  # 200 samples of class 1
+#x1 = np.random.multivariate_normal(mean1, cov1, n1)
+#y1 = np.ones(n1, dtype=np.int)
+
+#mean2, cov2, n2 = [2.5, 2.5], [[1,0],[0,1]], 300 # 300 samples of class -1
+#x2 = np.random.multivariate_normal(mean2, cov2, n2)
+#y2 = 0 * np.ones(n2, dtype=np.int)
+
+#X = np.concatenate((x1, x2), axis=0) # concatenate the 1 and -1 samples
 
 
 #y is the target classifications 0 and 1
 #y = [0, 1]
-y = np.concatenate((y1, y2))
+
+#y = np.concatenate((y1, y2))
 
 
 #Instantiate a new Support Vector Machine Classifier
@@ -48,9 +72,7 @@ clf.fit(X, y)
 
 #specify config options, read the docs
 SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0, 
-    decision_function_shape='ovr', degree=3, 
-    gamma='auto',  #gamma set to 100 guarentees overfitted support vector lines
-    kernel='rbf',
+    decision_function_shape='ovr', degree=3, gamma='auto', kernel='rbf',
     max_iter=-1, probability=False, random_state=None, shrinking=True,
     tol=0.001, verbose=False)
 
@@ -58,11 +80,11 @@ SVC(C=1.0, cache_size=200, class_weight=None, coef0=0.0,
 
 #If we pass in unseen row x=2 and y=2 then the answer should be classification 1
 
-production_point = [1., 2.5]
+production_point = [1., 2.5, 2]
 
 answer1 = clf.predict([production_point])
 
-production_point = [-1., 5]
+production_point = [2., 3, 4]
 
 answer2 = clf.predict([production_point])
 
@@ -81,6 +103,12 @@ plt.plot(production_point[0], production_point[1], 'o' + str(color), markersize=
 #I want to draw the decision line
 
 
+sys.stdout.write("Answer1: " + str(answer1))
+sys.stdout.write("Answer2: " + str(answer2))
+sys.stdout.write("done")
+
+exit()
+#Plotting makes less sense with n points, can't project to 2d classification
 ax = plt.gca()
 xlim = ax.get_xlim()
 ylim = ax.get_ylim()
@@ -111,12 +139,6 @@ plt.savefig("svm_segregate_two.py.png")
 #y = a*x - b
 
 
-sys.stdout.write("Answer1: " + str(answer1))
-sys.stdout.write("Answer2: " + str(answer2))
-sys.stdout.write("done")
-
-
-exit()
 W = clf._get_coef()[0]
 I = clf.intercept_
 print("W is: " + str(W))
